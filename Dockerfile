@@ -7,9 +7,10 @@ RUN apk add --update \
 
 #AWS and ESC CLI's
 RUN pip install awscli --upgrade --user
-ENV PATH="~/.local/bin:${PATH}"
 RUN curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest
 RUN chmod +x /usr/local/bin/ecs-cli
+ENV PATH ~/.local/bin:$PATH
+ENV PATH /root/.local/bin:$PATH
 
 #GIT
 RUN apk add git
