@@ -22,5 +22,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apk add zip
 
 #Node
-RUN curl -sL https://deb.nodesource.com/setup_6.x 
+RUN curl -sL https://deb.nodesource.com/setup_8.x 
 RUN apk add nodejs
