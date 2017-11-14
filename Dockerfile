@@ -1,5 +1,8 @@
 FROM php:7.0.22-alpine
 
+#Update apk
+RUN apk update
+
 #PIP 
 RUN apk add --update \
     python \    
@@ -22,5 +25,4 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apk add zip
 
 #Node
-RUN curl -sL https://deb.nodesource.com/setup_8.x 
 RUN apk add nodejs
